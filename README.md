@@ -13,7 +13,7 @@
   <h3 align="center">Hacker News Scraper</h3>
 
   <p align="center">
-    A robust Python application for scraping and analyzing top stories from Hacker News.
+    A Python script for scraping and analyzing top stories from Hacker News.
     <br />
     <a href="https://github.com/medalha01/Hacker-News-Scrapper"><strong>Explore the Docs »</strong></a>
     <br />
