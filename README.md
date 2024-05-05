@@ -8,7 +8,6 @@
 
 <div align="center">
   <a href="https://github.com/medalha01/Hacker-News-Scrapper">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Hacker News Scraper</h3>
