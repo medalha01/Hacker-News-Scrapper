@@ -7,8 +7,15 @@ import sys
 
 
 def scrape_hacker_news(url):
-    # URL of the Hacker News
+    """
+    Scrapes the Hacker News website for top stories.
 
+    Args:
+        url (str): The URL of the Hacker News page.
+
+    Returns:
+        list: A list of dictionaries, each containing information about a story.
+    """
     # Fetching the page
     response = requests.get(url)
     response.raise_for_status()  # Raises an HTTPError for bad responses
@@ -65,6 +72,15 @@ def scrape_hacker_news(url):
 
 
 def process_day(day):
+    """
+    Processes a specific day to scrape Hacker News.
+
+    Args:
+        day (int): The number of days before today to process.
+
+    Returns:
+        list: A list of dictionaries containing information about top stories for the day.
+    """
     now = datetime.now()
     month = now.month
     year = now.year
