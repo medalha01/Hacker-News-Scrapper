@@ -85,7 +85,7 @@ We welcome contributions to this project. If you have improvements or bug fixes,
 
 ## Contact
 
-Your Name - [Twitter](https://twitter.com/your_twitter) - your.email@example.com
+Isac Martins - isacmartins.1224@gmail.com
 
 Project Link: [https://github.com/medalha01/Hacker-News-Scrapper](https://github.com/medalha01/Hacker-News-Scrapper)
 
