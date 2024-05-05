@@ -113,6 +113,24 @@ def process_day(day):
     return scrape_hacker_news(url)
 
 
+def generate_html_report(stories):
+    """Generates an HTML report from the list of stories."""
+    with open("HackerReport.html", "w", encoding="utf8") as file:
+        file.write("<html><head><title>Hacker News Report</title></head><body>")
+        file.write("<h1>Hacker News Report</h1><ul>")
+        for story in stories:
+            file.write(
+                f"<li><a href='{story['link']}'>{story['title']}</a> - {story['points']} points, {story['comments']} comments</li>"
+            )
+        file.write("</ul></body></html>")
+
+
+def generate_json_report(stories):
+    """Generates a JSON report from the list of stories."""
+    with open("HackerReport.json", "w", encoding="utf8") as file:
+        json.dump(stories, file, indent=4)
+
+
 if __name__ == "__main__":
     if len(sys.argv) < 2 or len(sys.argv) > 3:
         print(
@@ -153,18 +171,7 @@ if __name__ == "__main__":
     )
 
     if entry_value != 2:
-        with open("HackerReport.json", "w", encoding="utf8") as file:
-            # Write to the file in a for loop
-            json.dump(sorted_news_stories, file, indent=4)
+        generate_json_report(sorted_news_stories)
 
     if entry_value != 1:
-        with open("HackerReport.html", "w", encoding="utf8") as file:
-            file.write("<html><head><title>Hacker News Report</title></head><body>")
-            file.write("<h1>Hacker News Report</h1>")
-            file.write("<ul>")
-            for story in sorted_news_stories:
-                file.write(
-                    f"<li><a href='{story['link']}'>{story['title']}</a> - {story['points']} points, {story['comments']} comments</li>"
-                )
-            file.write("</ul>")
-            file.write("</body></html>")
+        generate_html_report(sorted_news_stories)
