@@ -71,7 +71,8 @@ To set up this project locally, follow these simple steps.
 To start scraping, run the script with the desired number of days to fetch data and optionally specify the number of worker threads.
 
   ```sh
-  python scraper.py 7 4  # Example: Fetch data for 7 days using 4 threads```
+  python scraper.py 7 4  # Example: Fetch data for 7 days using 4 threads
+  ```
 
 ## Roadmap
 
