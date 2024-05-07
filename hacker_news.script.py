@@ -4,9 +4,39 @@ from datetime import datetime
 from multiprocessing import Pool
 import json
 import sys
+import asyncio
+import aiohttp
+from aiohttp import ClientError
 
 
-def scrape_hacker_news(url):
+async def fetch_url(session, url, retries=6):
+    """
+    Asynchronously fetch a URL with specified retries on failure.
+
+    Args:
+        session (aiohttp.ClientSession): The session used to make requests.
+        url (str): The URL to be fetched.
+        retries (int): Number of times to retry on failure.
+
+    Returns:
+        str: The text of the response.
+
+    Raises:
+        Exception: Raises an exception if all retries fail.
+    """
+    for attempt in range(retries):
+        try:
+            response = await session.get(url)
+            response.raise_for_status()  # Will raise an error for 4XX or 5XX status
+            return await response.text()
+        except (aiohttp.ClientResponseError, aiohttp.ClientConnectionError) as e:
+            if attempt < retries - 1:
+                await asyncio.sleep(2 * attempt)  # Exponential backoff
+            else:
+                raise Exception(f"Failed to fetch {url} after {retries} attempts.")
+
+
+async def scrape_hacker_news(url):
     """
     Scrapes the Hacker News website for top stories.
 
@@ -16,15 +46,18 @@ def scrape_hacker_news(url):
     Returns:
         list: A list of dictionaries, each containing information about a story.
     """
-    # Fetching the page
-    response = requests.get(url)
-    response.raise_for_status()  # Raises an HTTPError for bad responses
+    async with aiohttp.ClientSession(
+        headers={
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0"
+        }
+    ) as session:
+        response = await fetch_url(session, url)
 
-    soup = BeautifulSoup(response.text, "lxml")
+    soup = BeautifulSoup(response, "lxml")
     # Parsing the HTML
 
     # Find all story containers (assuming each story is in a 'tr' tag with class 'athing')
-    stories = soup.find_all("tr", class_="athing", limit=20)
+    stories = soup.find_all("tr", class_="athing", limit=30)
 
     # List to hold all stories
     news_stories = []
@@ -42,6 +75,7 @@ def scrape_hacker_news(url):
         # Extracting the author, points, and comments
         subtext = story.find_next_sibling("tr").find("td", class_="subtext")
         author = subtext.find("a", class_="hnuser")
+
         subtext = story.next_sibling.find("td", class_="subtext")
         points = (
             subtext.find("span", class_="score").text
@@ -81,6 +115,7 @@ def process_day(day):
     Returns:
         list: A list of dictionaries containing information about top stories for the day.
     """
+    print(day)
     now = datetime.now()
     month = now.month
     year = now.year
@@ -131,7 +166,7 @@ def generate_json_report(stories):
         json.dump(stories, file, indent=4)
 
 
-if __name__ == "__main__":
+async def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
         print(
             "Usage: python script.py arg1 arg2 \n Where Arg1 is the number of days in the report and Arg2 the number of thread workers (Default = 1)"
@@ -159,9 +194,16 @@ if __name__ == "__main__":
         pool_workers = sys.argv[2]
 
     # Get the top 20 Hacker News stories
-    with Pool(processes=int(pool_workers)) as pool:
-        # Map the process_day function to each day in the range
-        results = pool.map(process_day, range(int(number_of_days)))
+    ##with Pool(processes=int(pool_workers)) as pool:
+    ##    # Map the process_day function to each day in the range
+    ##  results = pool.map(process_day, range(int(number_of_days)))
+    results = []
+
+    tasks = [process_day(i) for i in range(int(number_of_days))]
+
+    results = await asyncio.gather(*tasks)  # Await all tasks concurrently
+    ##for i in range(int(number_of_days)):
+    ##    results += process_day(i)
 
     # Flatten the list of lists into a single list
     weekly_stories = [story for sublist in results for story in sublist]
@@ -175,3 +217,7 @@ if __name__ == "__main__":
 
     if entry_value != 1:
         generate_html_report(sorted_news_stories)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
