@@ -4,6 +4,92 @@ from datetime import datetime
 from multiprocessing import Pool
 import json
 import sys
+import psycopg2
+from psycopg2.extras import execute_values
+
+
+def connect_db():
+    """Connects to the PostgreSQL database."""
+    conn = psycopg2.connect(
+        dbname="HackerNews",
+        user="postgres",
+        password="99194067aA+-",
+        host="localhost",
+        port="mypass",
+    )
+    return conn
+
+
+def get_from_db_by_date(dn_connection, date):
+    """Gets stories from the PostgreSQL database and returns them as a list of dictionaries."""
+    with dn_connection.cursor() as cur:
+        cur.execute(
+            """
+            SELECT title, url, likes, n_comments
+            FROM news
+            WHERE emission_date = %s
+            """,
+            (date,),
+        )
+        rows = cur.fetchall()
+
+        # Transform each row into a dictionary
+        stories = [
+            {
+                "title": row[0],
+                "url": row[1],
+                "likes": row[2],
+                "n_comments": row[3],
+            }
+            for row in rows
+        ]
+
+        return stories
+
+
+def get_from_db_by_title(dn_connection, title):
+    """Gets stories from the PostgreSQL database."""
+    with dn_connection.cursor() as cur:
+        cur.execute(
+            """
+            SELECT title, url, likes, n_comments
+            FROM news
+            WHERE title = %s
+            """,
+            (title,),
+        )
+        return cur.fetchall()
+
+
+def insert_stories(dn_connection, date, stories):
+    """Inserts stories into the PostgreSQL database."""
+    with dn_connection.cursor() as cur:
+        # Deduplicate stories based on title
+        unique_stories = {story["title"]: story for story in stories}.values()
+
+        execute_values(
+            cur,
+            """
+            INSERT INTO news (title, url, emission_date, likes, n_comments)
+            VALUES %s
+            ON CONFLICT (title) DO UPDATE SET
+                url = EXCLUDED.url,
+                emission_date = EXCLUDED.emission_date,
+                likes = EXCLUDED.likes,
+                n_comments = EXCLUDED.n_comments
+            """,
+            [
+                (
+                    story["title"],
+                    story["url"],
+                    date,
+                    story["likes"],
+                    story["n_comments"],
+                )
+                for story in unique_stories
+            ],
+        )
+    dn_connection.commit()
 
 
 def scrape_hacker_news(url):
@@ -62,9 +148,9 @@ def scrape_hacker_news(url):
             {
                 "rank": rank.strip(),
                 "title": title,
-                "link": link,
-                "points": int(points),
-                "comments": comments,
+                "url": link,
+                "likes": int(points),
+                "n_comments": comments,
             }
         )
 
@@ -81,6 +167,8 @@ def process_day(day):
     Returns:
         list: A list of dictionaries containing information about top stories for the day.
     """
+    conn = connect_db()
+
     now = datetime.now()
     month = now.month
     year = now.year
@@ -109,8 +197,17 @@ def process_day(day):
     month_str = f"0{month}" if month < 10 else str(month)
 
     url = f"https://news.ycombinator.com/front?day={year}-{month_str}-{day_str}"
+
+    temp_stories = get_from_db_by_date(conn, f"{year}-{month_str}-{day_str}")
+    if temp_stories:
+
+        conn.close()
+        return temp_stories
     print(url)
-    return scrape_hacker_news(url)
+    stories = scrape_hacker_news(url)
+
+    insert_stories(conn, f"{year}-{month_str}-{day_str}", stories)
+    return stories
 
 
 def generate_html_report(stories):
@@ -120,7 +217,7 @@ def generate_html_report(stories):
         file.write("<h1>Hacker News Report</h1><ul>")
         for story in stories:
             file.write(
-                f"<li><a href='{story['link']}'>{story['title']}</a> - {story['points']} points, {story['comments']} comments</li>"
+                f"<li><a href='{story['url']}'>{story['title']}</a> - {story['likes']} points, {story['n_comments']} comments</li>"
             )
         file.write("</ul></body></html>")
 
@@ -166,9 +263,7 @@ if __name__ == "__main__":
     # Flatten the list of lists into a single list
     weekly_stories = [story for sublist in results for story in sublist]
 
-    sorted_news_stories = sorted(
-        weekly_stories, key=lambda x: x["points"], reverse=True
-    )
+    sorted_news_stories = sorted(weekly_stories, key=lambda x: x["likes"], reverse=True)
 
     if entry_value != 2:
         generate_json_report(sorted_news_stories)
