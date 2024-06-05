@@ -7,17 +7,15 @@ from scraper import scrape_hacker_news
 from report import generate_html_report, generate_json_report
 
 
-def process_day_db(day):
-    """Processes a specific day to scrape Hacker News."""
-    conn = connect_db()
-
+def calculate_date(day):
+    """Calculates the date for a specific day offset from today."""
     now = datetime.now()
     month = now.month
     year = now.year
     actualDay = int(now.day) - day
+
     while actualDay <= 0:
         month -= 1
-
         if month == 0:
             month = 12
             year -= 1
@@ -35,47 +33,32 @@ def process_day_db(day):
     day_str = f"0{actualDay}" if actualDay < 10 else str(actualDay)
     month_str = f"0{month}" if month < 10 else str(month)
 
-    url = f"https://news.ycombinator.com/front?day={year}-{month_str}-{day_str}"
+    return f"{year}-{month_str}-{day_str}"
 
-    temp_stories = get_from_db_by_date(conn, f"{year}-{month_str}-{day_str}")
+
+def process_day_db(day):
+    """Processes a specific day to scrape Hacker News."""
+    conn = connect_db()
+    date_str = calculate_date(day)
+
+    url = f"https://news.ycombinator.com/front?day={date_str}"
+
+    temp_stories = get_from_db_by_date(conn, date_str)
     if temp_stories:
         conn.close()
         return temp_stories
 
     stories = scrape_hacker_news(url)
-    insert_stories(conn, f"{year}-{month_str}-{day_str}", stories)
+    insert_stories(conn, date_str, stories)
     conn.close()
     return stories
 
 
 def process_day(day):
     """Processes a specific day to scrape Hacker News."""
+    date_str = calculate_date(day)
 
-    now = datetime.now()
-    month = now.month
-    year = now.year
-    actualDay = int(now.day) - day
-    while actualDay <= 0:
-        month -= 1
-
-        if month == 0:
-            month = 12
-            year -= 1
-
-        if month == 2:
-            if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-                actualDay = 29 + actualDay
-            else:
-                actualDay = 28 + actualDay
-        elif month in [4, 6, 9, 11]:
-            actualDay = 30 + actualDay
-        else:
-            actualDay = 31 + actualDay
-
-    day_str = f"0{actualDay}" if actualDay < 10 else str(actualDay)
-    month_str = f"0{month}" if month < 10 else str(month)
-
-    url = f"https://news.ycombinator.com/front?day={year}-{month_str}-{day_str}"
+    url = f"https://news.ycombinator.com/front?day={date_str}"
 
     stories = scrape_hacker_news(url)
     return stories
