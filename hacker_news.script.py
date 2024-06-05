@@ -13,9 +13,9 @@ def connect_db():
     conn = psycopg2.connect(
         dbname="HackerNews",
         user="postgres",
-        password="99194067aA+-",
+        password="mypass",
         host="localhost",
-        port="mypass",
+        port="7654",
     )
     return conn
 
