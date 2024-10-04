@@ -7,6 +7,12 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from aiohttp import ClientError
 import argparse
+import sqlite3
+
+
+connection = sqlite3.connect("hacker_scrapper.db")
+
+cursor = connection.cursor()
 
 
 async def batcher(tasks, size=10):
@@ -62,8 +68,23 @@ async def scrape_hacker_news(url):
     Returns:
         list: A list of dictionaries, each containing information about a story.
     """
+
     news_stories = []
 
+    db_entry = cursor.execute(f"SELECT * FROM hacker WHERE link = '{url}'").fetchall()
+
+    if db_entry:
+        for item in db_entry:
+            news_stories.append(
+                {
+                    "rank": item[2],
+                    "title": item[1],
+                    "link": item[3],
+                    "points": item[4],
+                    "comments": item[5],
+                }
+            )
+        return news_stories
     async with aiohttp.ClientSession(
         headers={
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0",
@@ -119,6 +140,10 @@ async def scrape_hacker_news(url):
                 "points": int(points),
                 "comments": comments,
             }
+        )
+        cursor.execute(
+            """ INSERT INTO hacker (title, rank, link, points, comments) VALUES (?, ?, ?, ?, ?)""",
+            (title, rank, link, points, comments),
         )
 
     return news_stories
@@ -204,6 +229,24 @@ async def main():
     if entry_value == 2 or entry_value == 3:
         generate_html_report(sorted_stories)
 
+    cursor.commit()
+    cursor.close()
+
 
 if __name__ == "__main__":
+
+    cursor.execute(
+        """
+    CREATE TABLE IF NOT EXISTS hacker (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        rank TEXT NOT NULL,
+        link TEXT NOT NULL,
+        points INTEGER NOT NULL,
+        comments TEXT NOT NULL
+    )
+    """
+    )
+
+    connection.commit()
     asyncio.run(main())

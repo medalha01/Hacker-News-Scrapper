@@ -1,3 +1,4 @@
+
 # Hacker News Scraper
 
 ![Contributors](https://img.shields.io/github/contributors/medalha01/Hacker-News-Scrapper.svg?style=for-the-badge)
@@ -47,41 +48,84 @@
 
 ## About The Project
 
-This project provides a tool to scrape the top stories from Hacker News using Python, BeautifulSoup, and requests. It allows users to fetch daily news data, aggregate it, and output the results in either JSON or HTML format.
+This project provides a tool to scrape the top stories from Hacker News using Python, BeautifulSoup, and aiohttp for asynchronous requests. It allows users to fetch daily news data, store it in a local SQLite database, and output the results in either JSON or HTML format.
 
 ### Built With
 
 - Python
 - BeautifulSoup
-- Requests
+- Aiohttp
+- SQLite3
 
 ## Getting Started
 
-To set up this project locally, follow these simple steps.
+Follow the instructions below to set up the project on your local machine.
 
 ### Prerequisites
 
-- Python 3
-- pip
-  ```sh
-  pip install beautifulsoup4 requests lxml
-  ```
+Ensure you have Python 3 installed. Install the necessary dependencies using `pip`:
+
+```sh
+pip install beautifulsoup4 requests lxml aiohttp
+```
+
+### Installation
+
+1. Clone the repo:
+    ```sh
+    git clone https://github.com/medalha01/Hacker-News-Scrapper.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd Hacker-News-Scrapper
+    ```
+
+3. Install the required Python libraries:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
 ## Usage
 
-To start scraping, run the script with the desired number of days to fetch data and optionally specify the number of worker threads.
+To start scraping, run the script with the desired number of days to fetch data and specify the type of output (JSON, HTML, or both).
 
-  ```sh
-  python scraper.py 7 4  # Example: Fetch data for 7 days using 4 threads
-  ```
+Example command:
+
+```sh
+python scraper.py 7  # Fetch top stories from the past 7 days
+```
+
+During the execution, you will be prompted to choose the report format:
+- `1`: JSON
+- `2`: HTML
+- `3`: Both
+
+### Example Usage:
+```sh
+python scraper.py 7  # Fetches data for the last 7 days
+```
 
 ## Roadmap
 
 - [ ] Add support for scraping other sections of Hacker News.
 - [ ] Enhance data visualization in the output reports.
+- [ ] Improve error handling and retry mechanism for failed requests.
 
 ## Contributing
 
-We welcome contributions to this project. If you have improvements or bug fixes, feel free to fork the repo and submit a pull request.
+Contributions are welcome! If you have suggestions, bug reports, or improvements, feel free to fork the repo and submit a pull request.
+
+### Steps to contribute:
+
+1. Fork the Project.
+2. Create a feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Contact
 
@@ -93,3 +137,8 @@ Project Link: [https://github.com/medalha01/Hacker-News-Scrapper](https://github
 
 - [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - [Requests: HTTP for Humans](https://requests.readthedocs.io/en/master/)
+- [Aiohttp Documentation](https://docs.aiohttp.org/en/stable/)
+  
+---
+
+This version clarifies usage, installation, and dependencies, aligns the code functionality with the instructions, and ensures consistency throughout.
