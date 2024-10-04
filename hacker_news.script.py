@@ -71,7 +71,8 @@ async def scrape_hacker_news(url):
 
     news_stories = []
 
-    db_entry = cursor.execute(f"SELECT * FROM hacker WHERE link = '{url}'").fetchall()
+    cursor.execute(f"SELECT * FROM hacker WHERE origin = '{url}'")
+    db_entry = cursor.fetchall()
 
     if db_entry:
         for item in db_entry:
@@ -142,8 +143,8 @@ async def scrape_hacker_news(url):
             }
         )
         cursor.execute(
-            """ INSERT INTO hacker (title, rank, link, points, comments) VALUES (?, ?, ?, ?, ?)""",
-            (title, rank, link, points, comments),
+            """ INSERT INTO hacker (title, rank, link, points, comments, origin) VALUES (?, ?, ?, ?, ?, ?)""",
+            (title, rank, link, points, comments, url),
         )
 
     return news_stories
@@ -243,7 +244,8 @@ if __name__ == "__main__":
         rank TEXT NOT NULL,
         link TEXT NOT NULL,
         points INTEGER NOT NULL,
-        comments TEXT NOT NULL
+        comments TEXT NOT NULL,
+        origin TEXT NOT NULL
     )
     """
     )
