@@ -229,7 +229,7 @@ async def main():
     if entry_value == 2 or entry_value == 3:
         generate_html_report(sorted_stories)
 
-    cursor.commit()
+    connection.commit()
     cursor.close()
 
 
