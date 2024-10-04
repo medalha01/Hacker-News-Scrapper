@@ -1,0 +1,1052 @@
+[
+    {
+        "rank": "1.",
+        "title": "Learning to Reason with LLMs",
+        "link": "https://openai.com/index/learning-to-reason-with-llms/",
+        "points": 1654,
+        "comments": "1261\u00a0comments"
+    },
+    {
+        "rank": "2.",
+        "title": "Patent troll Sable pays up, dedicates all its patents to the public",
+        "link": "https://blog.cloudflare.com/patent-troll-sable-pays-up/",
+        "points": 1106,
+        "comments": "332\u00a0comments"
+    },
+    {
+        "rank": "1.",
+        "title": "A $1k Wheelchair",
+        "link": "https://newmobility.com/not-a-wheelchair/",
+        "points": 949,
+        "comments": "423\u00a0comments"
+    },
+    {
+        "rank": "2.",
+        "title": "Show HN: iFixit created a new USB-C, repairable soldering system",
+        "link": "https://hackaday.com/2024/09/12/review-ifixits-fixhub-may-be-the-last-soldering-iron-you-ever-buy/",
+        "points": 928,
+        "comments": "405\u00a0comments"
+    },
+    {
+        "rank": "4.",
+        "title": "Too much efficiency makes everything worse (2022)",
+        "link": "https://sohl-dickstein.github.io/2022/11/06/strong-Goodhart.html",
+        "points": 914,
+        "comments": "359\u00a0comments"
+    },
+    {
+        "rank": "1.",
+        "title": "The Fastest Mutexes",
+        "link": "https://justine.lol/mutex/",
+        "points": 866,
+        "comments": "335\u00a0comments"
+    },
+    {
+        "rank": "8.",
+        "title": "Being Raised by the Internet",
+        "link": "https://jimmyhmiller.github.io/raised",
+        "points": 836,
+        "comments": "312\u00a0comments"
+    },
+    {
+        "rank": "1.",
+        "title": "Gavin Newsom vetoes SB 1047",
+        "link": "https://www.gov.ca.gov/wp-content/uploads/2024/09/SB-1047-Veto-Message.pdf",
+        "points": 778,
+        "comments": "476\u00a0comments"
+    },
+    {
+        "rank": "2.",
+        "title": "An adult fruit fly brain has been mapped",
+        "link": "https://www.economist.com/science-and-technology/2024/10/02/an-adult-fruit-fly-brain-has-been-mapped-human-brains-could-follow",
+        "points": 568,
+        "comments": "188\u00a0comments"
+    },
+    {
+        "rank": "5.",
+        "title": "Data sleuths who spotted research misconduct cleared of defamation",
+        "link": "https://arstechnica.com/science/2024/09/court-clears-researchers-of-defamation-for-identifying-manipulated-data/",
+        "points": 551,
+        "comments": "109\u00a0comments"
+    },
+    {
+        "rank": "8.",
+        "title": "Pledging $300k to the Zig Software Foundation",
+        "link": "https://mitchellh.com/writing/zig-donation",
+        "points": 532,
+        "comments": "191\u00a0comments"
+    },
+    {
+        "rank": "1.",
+        "title": "Why does man print \"gimme gimme gimme\" at 00:30? (2017)",
+        "link": "https://unix.stackexchange.com/questions/405783/why-does-man-print-gimme-gimme-gimme-at-0030",
+        "points": 505,
+        "comments": "201\u00a0comments"
+    },
+    {
+        "rank": "8.",
+        "title": "Is the world really running out of sand?",
+        "link": "https://practical.engineering/blog/2024/10/1/is-the-world-really-running-out-of-sand",
+        "points": 499,
+        "comments": "207\u00a0comments"
+    },
+    {
+        "rank": "5.",
+        "title": "Boris Vallejo and the pixel art of the demoscene",
+        "link": "https://marincomics.com/vallejo-pixelart.html",
+        "points": 487,
+        "comments": "118\u00a0comments"
+    },
+    {
+        "rank": "24.",
+        "title": "Gorhill pulls uBlock Origin Lite from Firefox store",
+        "link": "https://www.neowin.net/news/ublock-origin-lite-maker-ends-firefox-store-support-slams-mozilla-for-hostile-reviews/",
+        "points": 458,
+        "comments": "410\u00a0comments"
+    },
+    {
+        "rank": "24.",
+        "title": "Ryujinx (Nintendo Switch emulator) has been removed from GitHub",
+        "link": "https://github.com/Ryujinx/Ryujinx",
+        "points": 456,
+        "comments": "404\u00a0comments"
+    },
+    {
+        "rank": "2.",
+        "title": "Show HN: A real time AI video agent with under 1 second of latency",
+        "link": "item?id=41710227",
+        "points": 443,
+        "comments": "253\u00a0comments"
+    },
+    {
+        "rank": "3.",
+        "title": "Why Haskell?",
+        "link": "https://www.gtf.io/musings/why-haskell",
+        "points": 433,
+        "comments": "591\u00a0comments"
+    },
+    {
+        "rank": "11.",
+        "title": "How Discord stores trillions of messages (2023)",
+        "link": "https://discord.com/blog/how-discord-stores-trillions-of-messages",
+        "points": 432,
+        "comments": "232\u00a0comments"
+    },
+    {
+        "rank": "4.",
+        "title": "COBOL has been \u201cdead\u201d for so long, my grandpa wrote about it",
+        "link": "https://wumpus-cave.net/post/2024/10/2024-10-01-death-of-cobol/index.html",
+        "points": 420,
+        "comments": "430\u00a0comments"
+    },
+    {
+        "rank": "14.",
+        "title": "Bots, so many bots",
+        "link": "https://wakatime.com/blog/67-bots-so-many-bots",
+        "points": 405,
+        "comments": "423\u00a0comments"
+    },
+    {
+        "rank": "12.",
+        "title": "Some Go web dev notes",
+        "link": "https://jvns.ca/blog/2024/09/27/some-go-web-dev-notes/",
+        "points": 404,
+        "comments": "148\u00a0comments"
+    },
+    {
+        "rank": "14.",
+        "title": "Show HN: Konty \u2013 A Balsamiq-alternative lo-fi wireframe tool for modern apps",
+        "link": "https://konty.app/http://localhost:4321/",
+        "points": 392,
+        "comments": "138\u00a0comments"
+    },
+    {
+        "rank": "9.",
+        "title": "SpaceX launches mission for 2 NASA astronauts who are stuck on the ISS",
+        "link": "https://apnews.com/article/spacex-launch-boeing-nasa-stuck-astronauts-e179d0dc6c77d224278fd0430148ff8b",
+        "points": 380,
+        "comments": "346\u00a0comments"
+    },
+    {
+        "rank": "6.",
+        "title": "Sitina1 Open-Source Camera",
+        "link": "https://gitlab.com/zephray/sitina1",
+        "points": 376,
+        "comments": "159\u00a0comments"
+    },
+    {
+        "rank": "6.",
+        "title": "Don't build your castle in other people's kingdoms (2021)",
+        "link": "https://howtomarketagame.com/2021/11/01/dont-build-your-castle-in-other-peoples-kingdoms/",
+        "points": 374,
+        "comments": "254\u00a0comments"
+    },
+    {
+        "rank": "10.",
+        "title": "American WWII bomb explodes at Japanese airport, causing large crater in taxiway",
+        "link": "https://www.cnn.com/2024/10/02/travel/wwii-bomb-miyazaki-airport-japan-scli-intl/index.html",
+        "points": 361,
+        "comments": "296\u00a0comments"
+    },
+    {
+        "rank": "2.",
+        "title": "Map with public fruit trees",
+        "link": "https://mundraub.org/map",
+        "points": 357,
+        "comments": "153\u00a0comments"
+    },
+    {
+        "rank": "13.",
+        "title": "Ask HN: What are you working on (September 2024)?",
+        "link": "item?id=41690087",
+        "points": 354,
+        "comments": "1031\u00a0comments"
+    },
+    {
+        "rank": "3.",
+        "title": "Ask HN: Who is hiring? (October 2024)",
+        "link": "item?id=41709301",
+        "points": 350,
+        "comments": "404\u00a0comments"
+    },
+    {
+        "rank": "11.",
+        "title": "Math from Three to Seven",
+        "link": "https://www.thepsmiths.com/p/review-math-from-three-to-seven-by",
+        "points": 334,
+        "comments": "204\u00a0comments"
+    },
+    {
+        "rank": "27.",
+        "title": "FTC Report Confirms: Commercial Surveillance Is Out of Control",
+        "link": "https://www.eff.org/deeplinks/2024/09/ftc-report-confirms-commercial-surveillance-out-control",
+        "points": 332,
+        "comments": "153\u00a0comments"
+    },
+    {
+        "rank": "10.",
+        "title": "DiyPresso: DIY Espresso Machine",
+        "link": "https://www.diypresso.com/",
+        "points": 325,
+        "comments": "285\u00a0comments"
+    },
+    {
+        "rank": "13.",
+        "title": "Be a thermostat, not a thermometer (2023)",
+        "link": "https://larahogan.me/blog/be-a-thermostat-not-a-thermometer/",
+        "points": 313,
+        "comments": "132\u00a0comments"
+    },
+    {
+        "rank": "23.",
+        "title": "NASA Pulls Off Delicate Thruster Swap, Keeping Voyager 1 Mission Alive",
+        "link": "https://gizmodo.com/nasa-pulls-off-delicate-thruster-swap-keeping-voyager-1-mission-alive-2000497434",
+        "points": 304,
+        "comments": "69\u00a0comments"
+    },
+    {
+        "rank": "20.",
+        "title": "BorgBackup 2.0 supports Rclone \u2013 over 70 cloud providers in addition to SSH",
+        "link": "https://borgbackup.readthedocs.io/en/2.0.0b11/changes.html#version-2-0-0b11-2024-09-26",
+        "points": 301,
+        "comments": "118\u00a0comments"
+    },
+    {
+        "rank": "3.",
+        "title": "A Taxonomy of Tech Debt (2018)",
+        "link": "https://technology.riotgames.com/news/taxonomy-tech-debt",
+        "points": 292,
+        "comments": "75\u00a0comments"
+    },
+    {
+        "rank": "9.",
+        "title": "USPS' long-awaited new mail truck makes its debut to rave reviews from carriers",
+        "link": "https://apnews.com/article/postal-service-next-generation-delivery-vehicle-a2ebbfc7afec0eea2e036eef93bee4d9",
+        "points": 292,
+        "comments": "349\u00a0comments"
+    },
+    {
+        "rank": "18.",
+        "title": "Ask HN: Should you reply STOP to unwanted texts?",
+        "link": "item?id=41703312",
+        "points": 286,
+        "comments": "368\u00a0comments"
+    },
+    {
+        "rank": "4.",
+        "title": "Kolmogorov-Arnold networks may make neural networks more understandable",
+        "link": "https://www.quantamagazine.org/novel-architecture-makes-neural-networks-more-understandable-20240911/",
+        "points": 282,
+        "comments": "78\u00a0comments"
+    },
+    {
+        "rank": "7.",
+        "title": "Web components are okay",
+        "link": "https://nolanlawson.com/2024/09/28/web-components-are-okay/",
+        "points": 278,
+        "comments": "354\u00a0comments"
+    },
+    {
+        "rank": "7.",
+        "title": "Serialization Is the Secret",
+        "link": "https://www.zachdaniel.dev/p/serialization-is-the-secret",
+        "points": 276,
+        "comments": "98\u00a0comments"
+    },
+    {
+        "rank": "7.",
+        "title": "Experimental web browser optimized for rabbit-holing",
+        "link": "https://szymonkaliski.com/projects/cartographist/",
+        "points": 267,
+        "comments": "62\u00a0comments"
+    },
+    {
+        "rank": "3.",
+        "title": "AMD GPU Inference",
+        "link": "https://github.com/slashml/amd_inference",
+        "points": 264,
+        "comments": "96\u00a0comments"
+    },
+    {
+        "rank": "5.",
+        "title": "A Bendy RISC-V Processor",
+        "link": "https://spectrum.ieee.org/flexible-risc-v",
+        "points": 256,
+        "comments": "81\u00a0comments"
+    },
+    {
+        "rank": "7.",
+        "title": "Show HN: Sourcebot, an open-source Sourcegraph alternative",
+        "link": "https://github.com/sourcebot-dev/sourcebot",
+        "points": 255,
+        "comments": "59\u00a0comments"
+    },
+    {
+        "rank": "17.",
+        "title": "Comedy Theory (2022)",
+        "link": "https://rpgadventures.io/post/comedy-theory",
+        "points": 255,
+        "comments": "175\u00a0comments"
+    },
+    {
+        "rank": "27.",
+        "title": "1913: When Hitler, Trotsky, Tito, Freud and Stalin all lived in the same place",
+        "link": "https://www.bbc.com/news/magazine-21859771",
+        "points": 254,
+        "comments": "222\u00a0comments"
+    },
+    {
+        "rank": "17.",
+        "title": "Large-Scale Generation of Transit Maps from OpenStreetMap Data",
+        "link": "https://www.tandfonline.com/doi/full/10.1080/00087041.2024.2325761#abstract",
+        "points": 250,
+        "comments": "32\u00a0comments"
+    },
+    {
+        "rank": "23.",
+        "title": "Pro bettors disguising themselves as gambling addicts",
+        "link": "https://www.bloomberg.com/news/articles/2024-09-27/sports-betting-apps-are-even-more-toxic-than-you-imagined",
+        "points": 249,
+        "comments": "293\u00a0comments"
+    },
+    {
+        "rank": "4.",
+        "title": "How CERN serves 1EB of data via FUSE [video]",
+        "link": "https://kernel-recipes.org/en/2024/schedule/how-cern-serves-1eb-of-data-via-fuse/",
+        "points": 245,
+        "comments": "110\u00a0comments"
+    },
+    {
+        "rank": "16.",
+        "title": "ESO telescope captures the most detailed infrared map of the Milky Way",
+        "link": "https://www.eso.org/public/news/eso2413/",
+        "points": 244,
+        "comments": "60\u00a0comments"
+    },
+    {
+        "rank": "6.",
+        "title": "Why TCP needs 3 handshakes",
+        "link": "https://www.pixelstech.net/article/1727412048-Why-TCP-needs-3-handshakes",
+        "points": 235,
+        "comments": "77\u00a0comments"
+    },
+    {
+        "rank": "4.",
+        "title": "Cox slows Internet speeds in entire neighborhoods to punish any heavy users (2020)",
+        "link": "https://arstechnica.com/tech-policy/2020/06/cox-slows-internet-speeds-in-entire-neighborhoods-to-punish-any-heavy-users/",
+        "points": 234,
+        "comments": "157\u00a0comments"
+    },
+    {
+        "rank": "18.",
+        "title": "John Wheeler saw the tear in reality",
+        "link": "https://www.quantamagazine.org/john-wheeler-saw-the-tear-in-reality-20240925/",
+        "points": 232,
+        "comments": "189\u00a0comments"
+    },
+    {
+        "rank": "15.",
+        "title": "Essential node in global semiconductor supply chain hit by Hurricane Helene",
+        "link": "https://www.npr.org/2024/09/30/nx-s1-5133462/hurricane-helene-quartz-microchips-solar-panels-spruce-pine",
+        "points": 232,
+        "comments": "71\u00a0comments"
+    },
+    {
+        "rank": "10.",
+        "title": "FDA approves a novel drug for schizophrenia",
+        "link": "https://www.washingtonpost.com/business/2024/09/26/fda-antipsychotic-mental-illness-alzheimers/",
+        "points": 229,
+        "comments": "286\u00a0comments"
+    },
+    {
+        "rank": "15.",
+        "title": "A Uruguayan company teaches people how to turn regular cars into EVs",
+        "link": "https://restofworld.org/2024/electric-vehicle-conversions-uruguay/",
+        "points": 229,
+        "comments": "166\u00a0comments"
+    },
+    {
+        "rank": "16.",
+        "title": "Why Oxide Chose Illumos",
+        "link": "https://rfd.shared.oxide.computer/rfd/0026",
+        "points": 226,
+        "comments": "170\u00a0comments"
+    },
+    {
+        "rank": "10.",
+        "title": "Radio Shack Catalog Archive (1939-2011)",
+        "link": "https://www.radioshackcatalogs.com/?_hsenc=p2ANqtz-9H5PQMgh6cUobaKL8FZ3-Ib1lk2jXz-BBrutnvv14LwcLObCTepV_IHs6nj83QW1bzJZzkyQpOm2OVPZbBmOmtzIMoRw&_hsmi=327012423",
+        "points": 224,
+        "comments": "97\u00a0comments"
+    },
+    {
+        "rank": "8.",
+        "title": "Why and how we\u2019re migrating many of our servers from Linux to the BSDs",
+        "link": "https://it-notes.dragas.net/2024/10/03/i-solve-problems-eurobsdcon/",
+        "points": 213,
+        "comments": "117\u00a0comments"
+    },
+    {
+        "rank": "19.",
+        "title": "Northern Ontario man solves local legend, finds vintage liquor at bottom of lake",
+        "link": "https://www.cbc.ca/news/canada/sudbury/larder-lake-local-legend-sunken-taxi-vintage-liquor-1.7332124",
+        "points": 206,
+        "comments": "63\u00a0comments"
+    },
+    {
+        "rank": "18.",
+        "title": "Reader-LM: Small Language Models for Cleaning and Converting HTML to Markdown",
+        "link": "https://jina.ai/news/reader-lm-small-language-models-for-cleaning-and-converting-html-to-markdown/?nocache=1",
+        "points": 199,
+        "comments": "43\u00a0comments"
+    },
+    {
+        "rank": "9.",
+        "title": "A Local-First Case Study",
+        "link": "https://jakelazaroff.com/words/a-local-first-case-study/",
+        "points": 197,
+        "comments": "82\u00a0comments"
+    },
+    {
+        "rank": "11.",
+        "title": "DEF Con 32 \u2013 AMD Sinkclose Universal Ring-2 Privilege Escalation (Not Redacted) [pdf]",
+        "link": "https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20presentations/DEF%20CON%2032%20-%20Enrique%20Nissim%20Krzysztof%20Okupski%20-%20AMD%20Sinkclose%20Universal%20Ring-2%20Privilege%20Escalation.pdf",
+        "points": 195,
+        "comments": "30\u00a0comments"
+    },
+    {
+        "rank": "28.",
+        "title": "The Netherlands has returned some stolen artifacts to Indonesia",
+        "link": "https://www.smithsonianmag.com/smart-news/the-netherlands-returned-288-stolen-artifacts-to-indonesia-180985137/",
+        "points": 192,
+        "comments": "202\u00a0comments"
+    },
+    {
+        "rank": "5.",
+        "title": "The bunkbed conjecture is false",
+        "link": "https://igorpak.wordpress.com/2024/10/01/the-bunkbed-conjecture-is-false/",
+        "points": 187,
+        "comments": "66\u00a0comments"
+    },
+    {
+        "rank": "9.",
+        "title": "In Mexico\u2019s underwater caves, a glimpse of artifacts, fossils and human remains",
+        "link": "https://www.smithsonianmag.com/travel/divers-in-mexicos-underwater-caves-get-a-glimpse-of-rarely-seen-artifacts-fossils-and-human-remains-180985159/",
+        "points": 182,
+        "comments": "51\u00a0comments"
+    },
+    {
+        "rank": "6.",
+        "title": "GAZEploit: Remote keystroke inference attack by gaze estimation in VR/MR devices",
+        "link": "https://www.wired.com/story/apple-vision-pro-persona-eye-tracking-spy-typing/",
+        "points": 182,
+        "comments": "101\u00a0comments"
+    },
+    {
+        "rank": "14.",
+        "title": "On the design of text editors (2020)",
+        "link": "https://arxiv.org/abs/2008.06030",
+        "points": 179,
+        "comments": "82\u00a0comments"
+    },
+    {
+        "rank": "24.",
+        "title": "Ergo: Erlang-inspired event driven actor framework in Go",
+        "link": "https://github.com/ergo-services/ergo",
+        "points": 175,
+        "comments": "131\u00a0comments"
+    },
+    {
+        "rank": "12.",
+        "title": "PyTorch Native Architecture Optimization: Torchao",
+        "link": "https://pytorch.org/blog/pytorch-native-architecture-optimization/",
+        "points": 169,
+        "comments": "52\u00a0comments"
+    },
+    {
+        "rank": "21.",
+        "title": "Notes on the Crystal Language",
+        "link": "https://wiki.alopex.li/CrystalNotes",
+        "points": 167,
+        "comments": "67\u00a0comments"
+    },
+    {
+        "rank": "22.",
+        "title": "Show HN: htmgo - build simple and scalable systems with golang + htmx",
+        "link": "https://htmgo.dev",
+        "points": 165,
+        "comments": "80\u00a0comments"
+    },
+    {
+        "rank": "24.",
+        "title": "Varlink \u2013 IPC to replace D-Bus gradually in systemd",
+        "link": "https://varlink.org/",
+        "points": 161,
+        "comments": "245\u00a0comments"
+    },
+    {
+        "rank": "11.",
+        "title": "SlateDB \u2013 An embedded database built on object storage",
+        "link": "https://slatedb.io/",
+        "points": 160,
+        "comments": "52\u00a0comments"
+    },
+    {
+        "rank": "19.",
+        "title": "Ask HN: Who wants to be hired? (October 2024)",
+        "link": "item?id=41709299",
+        "points": 159,
+        "comments": "426\u00a0comments"
+    },
+    {
+        "rank": "15.",
+        "title": "Alan Kay on Messaging (1998)",
+        "link": "http://wiki.c2.com/?AlanKayOnMessaging",
+        "points": 157,
+        "comments": "88\u00a0comments"
+    },
+    {
+        "rank": "15.",
+        "title": "Some Automattic employees accept severance package offer",
+        "link": "https://techcrunch.com/2024/10/04/159-employees-are-leaving-automattic-as-ceos-fight-with-wp-engine-escalates/",
+        "points": 156,
+        "comments": "150\u00a0comments"
+    },
+    {
+        "rank": "20.",
+        "title": "Text2CAD: Generating sequential cad designs from text prompts",
+        "link": "https://sadilkhan.github.io/text2cad-project/",
+        "points": 156,
+        "comments": "75\u00a0comments"
+    },
+    {
+        "rank": "20.",
+        "title": "A Trail Gone Cold",
+        "link": "https://www.damninteresting.com/a-trail-gone-cold/",
+        "points": 150,
+        "comments": "16\u00a0comments"
+    },
+    {
+        "rank": "21.",
+        "title": "The Simple Guide to Building and Breaking Habits",
+        "link": "https://alexy.tech/posts/the-simple-guide-to-building-and-breaking-habits/",
+        "points": 148,
+        "comments": "70\u00a0comments"
+    },
+    {
+        "rank": "25.",
+        "title": "NASA is selling a brand-new Moon rover: Never used, one previous owner",
+        "link": "https://www.economist.com/science-and-technology/2024/09/25/nasa-is-selling-a-brand-new-moon-rover",
+        "points": 145,
+        "comments": "78\u00a0comments"
+    },
+    {
+        "rank": "30.",
+        "title": "Feldera Incremental Compute Engine",
+        "link": "https://github.com/feldera/feldera",
+        "points": 145,
+        "comments": "55\u00a0comments"
+    },
+    {
+        "rank": "23.",
+        "title": "Cat memes went viral 100 years ago",
+        "link": "https://www.bbc.com/future/article/20240923-100-year-old-cat-memes-that-predate-the-internet",
+        "points": 141,
+        "comments": "37\u00a0comments"
+    },
+    {
+        "rank": "15.",
+        "title": "In the land of LLMs, can we do better mock data generation?",
+        "link": "https://neurelo.substack.com/p/in-the-land-of-llms-can-we-do-better",
+        "points": 140,
+        "comments": "46\u00a0comments"
+    },
+    {
+        "rank": "18.",
+        "title": "Pagoda: Rapid, easy full-stack web development starter kit in Go",
+        "link": "https://github.com/mikestefanello/pagoda",
+        "points": 140,
+        "comments": "24\u00a0comments"
+    },
+    {
+        "rank": "7.",
+        "title": "F3 \u2013 Fight Flash Fraud",
+        "link": "https://fight-flash-fraud.readthedocs.io/en/latest/",
+        "points": 139,
+        "comments": "53\u00a0comments"
+    },
+    {
+        "rank": "22.",
+        "title": "The Minneapolis Street Grid: Explained",
+        "link": "https://streets.mn/2024/09/11/streets-and-avenues-in-minneapolis/",
+        "points": 139,
+        "comments": "62\u00a0comments"
+    },
+    {
+        "rank": "8.",
+        "title": "If I could dissect a sauropod",
+        "link": "https://svpow.com/2024/09/12/if-i-could-dissect-a-sauropod/",
+        "points": 138,
+        "comments": "18\u00a0comments"
+    },
+    {
+        "rank": "13.",
+        "title": "End the line: The last Sun SPARC workstation [video]",
+        "link": "https://www.youtube.com/watch?v=O3iUmhkP10k",
+        "points": 137,
+        "comments": "143\u00a0comments"
+    },
+    {
+        "rank": "26.",
+        "title": "Offline UX Patterns",
+        "link": "https://github.com/Expensify/App/blob/main/contributingGuides/OFFLINE_UX.md",
+        "points": 123,
+        "comments": "24\u00a0comments"
+    },
+    {
+        "rank": "17.",
+        "title": "Solving climate change by abusing thermodynamic scaling laws",
+        "link": "https://ckrapu.github.io/blog/2024/why-dont-we-just-freeze-the-carbon/",
+        "points": 123,
+        "comments": "173\u00a0comments"
+    },
+    {
+        "rank": "28.",
+        "title": "Making progress on side projects with content-driven development",
+        "link": "https://ntietz.com/blog/making-progress-with-content-driven-development/",
+        "points": 120,
+        "comments": "19\u00a0comments"
+    },
+    {
+        "rank": "16.",
+        "title": "Show HN: Iceoryx2 \u2013 Fast IPC Library for Rust, C++, and C",
+        "link": "https://ekxide.io/blog/iceoryx2-0-4-release/",
+        "points": 119,
+        "comments": "51\u00a0comments"
+    },
+    {
+        "rank": "25.",
+        "title": "Agentic patters from scratch using Groq",
+        "link": "https://github.com/neural-maze/agentic_patterns",
+        "points": 118,
+        "comments": "39\u00a0comments"
+    },
+    {
+        "rank": "12.",
+        "title": "Hierarchical Navigable Small World: a scalable nearest neighbor search",
+        "link": "https://github.com/brtholomy/hnsw/blob/master/README.md",
+        "points": 116,
+        "comments": "5\u00a0comments"
+    },
+    {
+        "rank": "17.",
+        "title": "Make Pottery at Home Without a Kiln (Or Anything Else) [video]",
+        "link": "https://www.youtube.com/watch?v=VaX1iOyKsB0",
+        "points": 115,
+        "comments": "36\u00a0comments"
+    },
+    {
+        "rank": "5.",
+        "title": "Correcting the record for Continue and PearAI",
+        "link": "https://www.ycombinator.com/blog/correcting-the-record/",
+        "points": 112,
+        "comments": "86\u00a0comments"
+    },
+    {
+        "rank": "12.",
+        "title": "Linear, symmetric, self-selecting 14-bit molecular memristors (2023)",
+        "link": "https://www.researchgate.net/publication/377744243_Linear_symmetric_self-selecting_14-bit_molecular_memristors",
+        "points": 109,
+        "comments": "55\u00a0comments"
+    },
+    {
+        "rank": "13.",
+        "title": "WALDO: Whereabouts Ascertainment for Low-Lying Detectable Objects",
+        "link": "https://github.com/stephansturges/WALDO",
+        "points": 106,
+        "comments": "42\u00a0comments"
+    },
+    {
+        "rank": "28.",
+        "title": "Show HN: A Demo for a Strategy Game",
+        "link": "https://store.steampowered.com/app/2389320/Fall_of_an_Empire_Demo/",
+        "points": 106,
+        "comments": "32\u00a0comments"
+    },
+    {
+        "rank": "19.",
+        "title": "Cores That Don't Count [pdf] (2021)",
+        "link": "https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf",
+        "points": 106,
+        "comments": "13\u00a0comments"
+    },
+    {
+        "rank": "26.",
+        "title": "Prep: Golang Comptime",
+        "link": "https://github.com/pijng/prep",
+        "points": 106,
+        "comments": "25\u00a0comments"
+    },
+    {
+        "rank": "27.",
+        "title": "Show HN: Kameo \u2013 Fault-tolerant async actors built on Tokio",
+        "link": "https://github.com/tqwewe/kameo",
+        "points": 102,
+        "comments": "48\u00a0comments"
+    },
+    {
+        "rank": "29.",
+        "title": "My Experience Getting Licensed in Ham Radio (2020)",
+        "link": "https://beckystern.com/2020/03/08/my-experience-getting-licensed-in-ham-radio/",
+        "points": 99,
+        "comments": "48\u00a0comments"
+    },
+    {
+        "rank": "17.",
+        "title": "IRS Direct File adds 12 additional states, covers more tax situations in 2025",
+        "link": "https://www.irs.gov/newsroom/irs-direct-file-set-to-expand-availability-in-a-dozen-new-states-and-cover-wider-range-of-tax-situations-for-the-2025-tax-filing-season",
+        "points": 96,
+        "comments": "40\u00a0comments"
+    },
+    {
+        "rank": "28.",
+        "title": "CPU Throttling for containerized Go applications explained",
+        "link": "https://kanishk.io/posts/cpu-throttling-in-containerized-go-apps/",
+        "points": 96,
+        "comments": "17\u00a0comments"
+    },
+    {
+        "rank": "11.",
+        "title": "DOSBox-X: Enhanced Fork of DOSBox for Expanded DOS and Retro PC Support",
+        "link": "https://github.com/joncampbell123/dosbox-x",
+        "points": 95,
+        "comments": "38\u00a0comments"
+    },
+    {
+        "rank": "19.",
+        "title": "Defusedxml \u2013 defusing XML bombs and other exploits",
+        "link": "https://github.com/tiran/defusedxml",
+        "points": 92,
+        "comments": "20\u00a0comments"
+    },
+    {
+        "rank": "22.",
+        "title": "Show HN: Venator \u2013 Open-source threat detection",
+        "link": "https://github.com/nianticlabs/venator",
+        "points": 90,
+        "comments": "3\u00a0comments"
+    },
+    {
+        "rank": "21.",
+        "title": "Random access string compression with FSST and Rust",
+        "link": "https://blog.spiraldb.com/compressing-strings-with-fsst/",
+        "points": 87,
+        "comments": "13\u00a0comments"
+    },
+    {
+        "rank": "26.",
+        "title": "Pilot flying Helene rescue missions in NC threatened with arrest",
+        "link": "https://www.qcnews.com/news/investigations/sc-pilot-flying-volunteer-supply-and-rescue-missions-ordered-out-of-lake-lure-under-arrest-threat/",
+        "points": 86,
+        "comments": "116\u00a0comments"
+    },
+    {
+        "rank": "27.",
+        "title": "Please Don't Make Me Download Another App",
+        "link": "https://www.theatlantic.com/technology/archive/2024/10/too-many-apps/680122/",
+        "points": 86,
+        "comments": "97\u00a0comments"
+    },
+    {
+        "rank": "14.",
+        "title": "Hash Ordering and Hyrum's Law",
+        "link": "https://eaftan.github.io/hash-ordering/",
+        "points": 86,
+        "comments": "40\u00a0comments"
+    },
+    {
+        "rank": "20.",
+        "title": "Qubit Transistors Reach Error Correction Benchmark",
+        "link": "https://spectrum.ieee.org/qubit-transistor",
+        "points": 86,
+        "comments": "20\u00a0comments"
+    },
+    {
+        "rank": "27.",
+        "title": "Matrix-Libera IRC Bridge Temporary Shutdown, a Retrospective (2023)",
+        "link": "https://libera.chat/news/matrix-bridge-disabled-retrospective",
+        "points": 84,
+        "comments": "77\u00a0comments"
+    },
+    {
+        "rank": "19.",
+        "title": "New research says blue zones can be explained by comically flawed data",
+        "link": "https://www.independent.co.uk/life-style/blue-zones-netflix-ignobel-prize-b2622952.html",
+        "points": 83,
+        "comments": "41\u00a0comments"
+    },
+    {
+        "rank": "23.",
+        "title": "AI agent promotes itself to sysadmin, trashes boot sequence",
+        "link": "https://www.theregister.com/2024/10/02/ai_agent_trashes_pc/",
+        "points": 83,
+        "comments": "72\u00a0comments"
+    },
+    {
+        "rank": "30.",
+        "title": "Do All Problems Have Technical Fixes?",
+        "link": "https://cacm.acm.org/article/do-all-problems-have-technical-fixes/",
+        "points": 79,
+        "comments": "84\u00a0comments"
+    },
+    {
+        "rank": "26.",
+        "title": "The Case of the Missing Increment",
+        "link": "https://www.computerenhance.com/p/the-case-of-the-missing-increment",
+        "points": 78,
+        "comments": "25\u00a0comments"
+    },
+    {
+        "rank": "25.",
+        "title": "Peer Gynt quilt, Part 1 (2021)",
+        "link": "https://www.icemoonprison.com/blog/archives/282",
+        "points": 77,
+        "comments": "7\u00a0comments"
+    },
+    {
+        "rank": "3.",
+        "title": "The Unraveling of Space-Time",
+        "link": "https://www.quantamagazine.org/the-unraveling-of-space-time-20240925/",
+        "points": 76,
+        "comments": "64\u00a0comments"
+    },
+    {
+        "rank": "16.",
+        "title": "Newton's financial misadventures in the South Sea Bubble (2018)",
+        "link": "https://royalsocietypublishing.org/doi/10.1098/rsnr.2018.0018",
+        "points": 76,
+        "comments": "35\u00a0comments"
+    },
+    {
+        "rank": "21.",
+        "title": "Keynes on the influence of furniture on love",
+        "link": "https://adamtooze.substack.com/p/chartbook-322-can-we-consume-our",
+        "points": 75,
+        "comments": "49\u00a0comments"
+    },
+    {
+        "rank": "29.",
+        "title": "Show HN: Galaxy Visualization",
+        "link": "https://github.com/Avicted/galaxy_visualization_raylib",
+        "points": 75,
+        "comments": "12\u00a0comments"
+    },
+    {
+        "rank": "25.",
+        "title": "Reverse Engineering and Dismantling Kekz Headphones",
+        "link": "https://nv1t.github.io/blog/kekz-headphones/",
+        "points": 74,
+        "comments": "6\u00a0comments"
+    },
+    {
+        "rank": "30.",
+        "title": "Eliminating Intermediate Array Allocations",
+        "link": "https://tenderlovemaking.com/2024/09/29/eliminating-intermediate-array-allocations/",
+        "points": 68,
+        "comments": "3\u00a0comments"
+    },
+    {
+        "rank": "10.",
+        "title": "Perfctl: A Stealthy Malware Targeting Linux Servers",
+        "link": "https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/",
+        "points": 67,
+        "comments": "18\u00a0comments"
+    },
+    {
+        "rank": "26.",
+        "title": "Iron Gall Ink",
+        "link": "https://en.wikipedia.org/wiki/Iron_gall_ink",
+        "points": 67,
+        "comments": "27\u00a0comments"
+    },
+    {
+        "rank": "29.",
+        "title": "Fix photogrammetry bridges so that they are not \"solid\" underneath (2020)",
+        "link": "https://forums.flightsimulator.com/t/fix-photogrammetry-bridges-so-that-they-are-not-solid-underneath/326917",
+        "points": 66,
+        "comments": "19\u00a0comments"
+    },
+    {
+        "rank": "30.",
+        "title": "Show HN: Repogather \u2013 copy relevant files to clipboard for LLM coding workflows",
+        "link": "https://github.com/gr-b/repogather",
+        "points": 65,
+        "comments": "33\u00a0comments"
+    },
+    {
+        "rank": "18.",
+        "title": "Show HN: Screensavers for your terminal (Bevy/Ratatui)",
+        "link": "https://github.com/cxreiff/ttysvr",
+        "points": 64,
+        "comments": "13\u00a0comments"
+    },
+    {
+        "rank": "29.",
+        "title": "PC Floppy Copy Protection: Vault Prolok",
+        "link": "https://martypc.blogspot.com/2024/09/pc-floppy-copy-protection-vault-prolok.html",
+        "points": 63,
+        "comments": "8\u00a0comments"
+    },
+    {
+        "rank": "9.",
+        "title": "Personal Names Around the World (2011)",
+        "link": "https://www.w3.org/International/questions/qa-personal-names",
+        "points": 61,
+        "comments": "27\u00a0comments"
+    },
+    {
+        "rank": "6.",
+        "title": "Sequencing wastewater may be key to getting a grip on the H5N1 bird flu outbreak",
+        "link": "https://www.statnews.com/2024/09/27/h5n1-bird-flu-wastewater-surveillance-sequencing/",
+        "points": 58,
+        "comments": "19\u00a0comments"
+    },
+    {
+        "rank": "22.",
+        "title": "Sausages: An Anthology",
+        "link": "https://thelionandunicorn.wordpress.com/2024/09/25/sausages-an-anthology/",
+        "points": 55,
+        "comments": "7\u00a0comments"
+    },
+    {
+        "rank": "13.",
+        "title": "Why does Lisp use cons cells? (1998)",
+        "link": "https://www.xach.com/naggum/articles/3092837184154309@naggum.no.html",
+        "points": 50,
+        "comments": "35\u00a0comments"
+    },
+    {
+        "rank": "23.",
+        "title": "Tracking the historical events that lead to the interweaving of knowledge (2021)",
+        "link": "https://cacm.acm.org/research/knowledge-graphs/",
+        "points": 49,
+        "comments": "3\u00a0comments"
+    },
+    {
+        "rank": "25.",
+        "title": "Launch HN: Quetzal (YC S24) \u2013 Stripe for Internationalization",
+        "link": "item?id=41712020",
+        "points": 48,
+        "comments": "36\u00a0comments"
+    },
+    {
+        "rank": "12.",
+        "title": "Skymont: Intel\u2019s E-Cores reach for the Sky",
+        "link": "https://chipsandcheese.com/2024/10/03/skymont-intels-e-cores-reach-for-the-sky/",
+        "points": 44,
+        "comments": "5\u00a0comments"
+    },
+    {
+        "rank": "16.",
+        "title": "Go Concurrency vs. RxJS",
+        "link": "https://code.gdnetwork.co/blog/go-vs-rxjs",
+        "points": 41,
+        "comments": "40\u00a0comments"
+    },
+    {
+        "rank": "24.",
+        "title": "SiteOne Crawler \u2013 big tool with no users",
+        "link": "https://crawler.siteone.io/",
+        "points": 41,
+        "comments": "15\u00a0comments"
+    },
+    {
+        "rank": "14.",
+        "title": "The Silk Road (2023)",
+        "link": "https://www.historytoday.com/archive/feature/secrets-silk-road",
+        "points": 36,
+        "comments": "7\u00a0comments"
+    },
+    {
+        "rank": "22.",
+        "title": "Magic Isn't Real",
+        "link": "https://pthorpe92.dev/programming/magic/",
+        "points": 32,
+        "comments": "17\u00a0comments"
+    },
+    {
+        "rank": "20.",
+        "title": "Show HN: Zero \u2013 DX focused non framework to interact with the DOM",
+        "link": "https://github.com/nhh/zero",
+        "points": 28,
+        "comments": "4\u00a0comments"
+    },
+    {
+        "rank": "29.",
+        "title": "The End of Private Libraries",
+        "link": "https://robertbreen.com/2024/03/01/the-end-of-private-libraries/",
+        "points": 25,
+        "comments": "12\u00a0comments"
+    },
+    {
+        "rank": "21.",
+        "title": "Interviewing for Evidence",
+        "link": "https://dannorth.net/interviewing-for-evidence/",
+        "points": 21,
+        "comments": "11\u00a0comments"
+    },
+    {
+        "rank": "28.",
+        "title": "I added a fun random ASCII art welcome screen to Vim",
+        "link": "https://blog.merlinsbeard.ai/how-to-show-an-ascii-art-welcome-screen-at-the-top-of-the-vim-terminal/",
+        "points": 9,
+        "comments": "5\u00a0comments"
+    },
+    {
+        "rank": "30.",
+        "title": "Holocron is an object storage based leader election library",
+        "link": "https://github.com/kellabyte/holocron",
+        "points": 9,
+        "comments": "No comments"
+    }
+]

@@ -7,16 +7,28 @@ import sys
 import asyncio
 import aiohttp
 from aiohttp import ClientError
+import random
+from datetime import datetime, timedelta
+
+async def batcher(tasks, size = 10):
+    return_list = []
+    for i in range(0, len(tasks), size):
+        batch = tasks[i: i + size]
+        results = await asyncio.gather(*batch)
+        return_list.append(results)
+    return return_list
+    
 
 
-async def fetch_url(session, url, retries=6):
+async def fetch_url(session, url, retries=8, backoff_factor=2):
     """
-    Asynchronously fetch a URL with specified retries on failure.
+    Asynchronously fetch a URL with specified retries and exponential backoff.
 
     Args:
         session (aiohttp.ClientSession): The session used to make requests.
         url (str): The URL to be fetched.
         retries (int): Number of times to retry on failure.
+        backoff_factor (int): Multiplier for exponential backoff.
 
     Returns:
         str: The text of the response.
@@ -26,14 +38,18 @@ async def fetch_url(session, url, retries=6):
     """
     for attempt in range(retries):
         try:
-            response = await session.get(url)
-            response.raise_for_status()  # Will raise an error for 4XX or 5XX status
-            return await response.text()
-        except (aiohttp.ClientResponseError, aiohttp.ClientConnectionError) as e:
+            async with session.get(url) as response:
+                response.raise_for_status()  
+                return await response.text()
+        except aiohttp.ClientError as e:
             if attempt < retries - 1:
-                await asyncio.sleep(2 * attempt)  # Exponential backoff
+                random_factor = random.uniform(0.5, 1.5) 
+                sleep_time = backoff_factor ** attempt * random_factor
+                print(f"Attempt {attempt + 1} failed, retrying in {min(sleep_time, 60)} seconds...")
+                await asyncio.sleep(min(sleep_time, 60))  # Cap sleep time at 60 seconds
             else:
-                raise Exception(f"Failed to fetch {url} after {retries} attempts.")
+                print(f"Failed to fetch {url} after {retries} attempts.")
+                return None
 
 
 async def scrape_hacker_news(url):
@@ -46,21 +62,24 @@ async def scrape_hacker_news(url):
     Returns:
         list: A list of dictionaries, each containing information about a story.
     """
+
+    news_stories = []
+
     async with aiohttp.ClientSession(
         headers={
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0"
         }
     ) as session:
         response = await fetch_url(session, url)
-
+    
+    if response is None:
+        return news_stories
     soup = BeautifulSoup(response, "lxml")
     # Parsing the HTML
 
     # Find all story containers (assuming each story is in a 'tr' tag with class 'athing')
     stories = soup.find_all("tr", class_="athing", limit=30)
 
-    # List to hold all stories
-    news_stories = []
 
     # Extracting data from each story
     for story in stories:
@@ -105,8 +124,8 @@ async def scrape_hacker_news(url):
     return news_stories
 
 
-def process_day(day):
-    """
+"""def process_day(day):
+
     Processes a specific day to scrape Hacker News.
 
     Args:
@@ -114,7 +133,7 @@ def process_day(day):
 
     Returns:
         list: A list of dictionaries containing information about top stories for the day.
-    """
+
     print(day)
     now = datetime.now()
     month = now.month
@@ -146,11 +165,39 @@ def process_day(day):
     url = f"https://news.ycombinator.com/front?day={year}-{month_str}-{day_str}"
     print(url)
     return scrape_hacker_news(url)
+"""
+
+def process_day(day):
+    """
+    Processes a specific day to scrape Hacker News.
+
+    Args:
+        day (int): The number of days before today to process.
+
+    Returns:
+        list: A list of dictionaries containing information about top stories for the day.
+    """
+    # Calculate the date 'day' days before today
+    target_date = datetime.now() - timedelta(days=day)
+    
+    # Format the day and month to always have two digits
+    day_str = target_date.strftime("%d")
+    month_str = target_date.strftime("%m")
+    year_str = target_date.strftime("%Y")
+
+    # Construct the URL
+    url = f"https://news.ycombinator.com/front?day={year_str}-{month_str}-{day_str}"
+    
+    # Call the scraping function (assuming scrape_hacker_news is already defined)
+    return scrape_hacker_news(url)
+
 
 
 def generate_html_report(stories):
     """Generates an HTML report from the list of stories."""
-    with open("HackerReport.html", "w", encoding="utf8") as file:
+    now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    file_name = f"HackerReport_{now}.html"
+    with open(file_name, "w", encoding="utf8") as file:
         file.write("<html><head><title>Hacker News Report</title></head><body>")
         file.write("<h1>Hacker News Report</h1><ul>")
         for story in stories:
@@ -158,16 +205,22 @@ def generate_html_report(stories):
                 f"<li><a href='{story['link']}'>{story['title']}</a> - {story['points']} points, {story['comments']} comments</li>"
             )
         file.write("</ul></body></html>")
+    print(f"HTML report generated: {file_name}")
+
 
 
 def generate_json_report(stories):
     """Generates a JSON report from the list of stories."""
-    with open("HackerReport.json", "w", encoding="utf8") as file:
+    now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    file_name = f"HackerReport_{now}.json"
+    with open(file_name, "w", encoding="utf8") as file:
         json.dump(stories, file, indent=4)
+    print(f"JSON report generated: {file_name}")
+
 
 
 async def main():
-    if len(sys.argv) < 2 or len(sys.argv) > 3:
+    if len(sys.argv) != 2:
         print(
             "Usage: python script.py arg1 arg2 \n Where Arg1 is the number of days in the report and Arg2 the number of thread workers (Default = 1)"
         )
@@ -189,23 +242,13 @@ async def main():
     # Get the arguments
     number_of_days = sys.argv[1]
 
-    pool_workers = 1
-    if len(sys.argv) == 3:
-        pool_workers = sys.argv[2]
 
-    # Get the top 20 Hacker News stories
-    ##with Pool(processes=int(pool_workers)) as pool:
-    ##    # Map the process_day function to each day in the range
-    ##  results = pool.map(process_day, range(int(number_of_days)))
     results = []
 
     tasks = [process_day(i) for i in range(int(number_of_days))]
 
-    results = await asyncio.gather(*tasks)  # Await all tasks concurrently
-    ##for i in range(int(number_of_days)):
-    ##    results += process_day(i)
+    results = await batcher(tasks)
 
-    # Flatten the list of lists into a single list
     weekly_stories = [story for sublist in results for story in sublist]
 
     sorted_news_stories = sorted(
