@@ -15,7 +15,7 @@ connection = sqlite3.connect("hacker_scrapper.db")
 cursor = connection.cursor()
 
 
-async def batcher(tasks, size=10):
+async def batcher(tasks, size=30):
     """
     Batch async tasks to limit concurrency.
     """
@@ -27,7 +27,7 @@ async def batcher(tasks, size=10):
     return results
 
 
-async def fetch_url(session, url, retries=8, backoff_factor=2):
+async def fetch_url(session, url, retries=2, backoff_factor=2):
     """
     Asynchronously fetch a URL with specified retries and exponential backoff.
 
